@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/longest-valid-parentheses/solutions/5024031/linear-solution-without-additional-memory/
+ */
 class Problem32 {
 public:
     int longestValidParentheses(string s) {
