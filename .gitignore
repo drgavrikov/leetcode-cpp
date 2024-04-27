@@ -1,7 +1,11 @@
+/src/Problem32
+/src/Problem129
+/src/Problem356
+/src/Problem1702
+/.idea/*
+/.idea/misc.xml
+/cmake-build-debug
 /Problem32
 /Problem129
 /Problem356
 /Problem1702
-/.idea/*
-/.idea/misc.xml
-/cmake-build-debug
