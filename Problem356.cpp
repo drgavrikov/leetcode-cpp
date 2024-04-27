@@ -17,7 +17,7 @@ public:
         for (const vector<int>& point : points) {
             const int x = point[0];
             const int y = point[1];
-            coordinates[x].insert(x);
+            coordinates[x].insert(y);
 
             if (x > maxX) maxX = x;
             if (x < minX) minX = x;
