@@ -6,8 +6,6 @@ using std::vector;
 using std::unordered_map;
 using std::unordered_set;
 using std::numeric_limits;
-using std::max;
-using std::min;
 
 class Problem356 {
 public:
@@ -16,23 +14,21 @@ public:
         int maxX = numeric_limits<int>::min();
         int minX = numeric_limits<int>::max();
 
-        for (const auto& point : points) {
-            int x = point[0];
-            int y = point[1];
-            coordinates[x].insert(y);
+        for (const vector<int>& point : points) {
+            const int x = point[0];
+            const int y = point[1];
+            coordinates[x].insert(x);
 
-            maxX = max(maxX, x);
-            minX = min(minX, x);
+            if (x > maxX) maxX = x;
+            if (x < minX) minX = x;
         }
 
         double middle = (maxX + minX) / 2.0;
-        for (const auto& point : points) {
-            int x = point[0];
-            int y = point[1];
-            int reflectedX = static_cast<int>(middle - (x - middle));
-            if (coordinates.find(reflectedX) == coordinates.end() ||
-                coordinates[reflectedX].find(y) == coordinates[reflectedX].end())
-                return false;
+        for (const vector<int>& point : points) {
+            const int x = point[0];
+            const int y = point[1];
+            const int reflectedX = static_cast<int>(middle - (x - middle));
+            if (coordinates.count(reflectedX) == 0 || coordinates[reflectedX].count(y) == 0) return false;
         }
         return true;
     }
