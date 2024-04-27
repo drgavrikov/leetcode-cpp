@@ -1,9 +1,0 @@
-# ninja log v5
-1	117	1714152995153036674	build.ninja	1e002fdff2c0ab01
-5	67	1714151890318509665	CMakeFiles/leetcode_cpp.dir/TreeNode.cpp.o	cb531dd8958143a1
-4	101	1714151890352956377	CMakeFiles/leetcode_cpp.dir/Problem129.cpp.o	9265db959a26c12b
-103	205	1714150304986806330	leetcode_cpp	ab47e7de70adfc51
-4	1254	1714152039818195936	CMakeFiles/leetcode_cpp.dir/Problem356.cpp.o	ba59a80de302cec3
-1	857	1714150721932680844	CMakeFiles/leetcode_cpp.dir/Problem32.cpp.o	39b009d13a33223e
-6	619	1714153099892404474	CMakeFiles/leetcode_cpp.dir/Problem1702.cpp.o	86d7deea795420ef
-5	959	1714153100231910070	CMakeFiles/leetcode_cpp.dir/Problem356.cpp.o	ba59a80de302cec3
