@@ -1,8 +1,6 @@
 #include "TreeNode.cpp"
 #include <cassert>
 
-using namespace std;
-
 class Problem129 {
 public:
     int dfs(TreeNode* node, int pathSum = 0) {
