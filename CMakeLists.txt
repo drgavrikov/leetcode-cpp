@@ -10,4 +10,6 @@ add_executable(leetcode_cpp
         src/Problem356.cpp
         src/Problem1702.cpp
         src/Problem129.cpp
+        src/Problem2370.cpp
+        src/Problem834.cpp
 )
