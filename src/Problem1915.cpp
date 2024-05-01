@@ -10,6 +10,7 @@ public:
     long long wonderfulSubstrings(std::string word) {
         const int size = 1 << 10;
         long long frequencies[size];
+
         std::fill(frequencies, frequencies + size, 0LL);
 
         frequencies[0] = 1;
@@ -33,7 +34,7 @@ public:
 
 int main() {
     Problem1915 problem;
-    assert(4 == problem.wonderfulSubstrings("aba"));
-    assert(9 == problem.wonderfulSubstrings("aabb"));
+    assert(problem.wonderfulSubstrings("aba") == 4);
+    assert(problem.wonderfulSubstrings("aabb") == 9);
     return 0;
 }
