@@ -1,17 +1,14 @@
 #include <string>
-#include <unordered_map>
+#include <unordered_set>
 #include <cassert>
 
-using namespace std;
+using std::string;
+using std::unordered_map;
 
-/**
- * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/solutions/5095009/sliding-window-solution/
- */
 class Problem159 {
 public:
     int lengthOfLongestSubstringTwoDistinct(string s) {
-        std::unordered_map<char, int> chars;
+        unordered_map<char, int> chars;
 
         int result = 0;
 
@@ -28,7 +25,7 @@ public:
                 }
                 left++;
             }
-            result = max(result, right - left + 1);
+            result = std::max(result, right - left + 1);
             right++;
         }
 
@@ -38,7 +35,7 @@ public:
 
 int main() {
     Problem159 problem;
-    assert(3 == problem.lengthOfLongestSubstringTwoDistinct("eceba"));
-    assert(5 == problem.lengthOfLongestSubstringTwoDistinct("ccaabbb"));
+    assert(problem.lengthOfLongestSubstringTwoDistinct("eceba") == 3);
+    assert(problem.lengthOfLongestSubstringTwoDistinct("ccaabbb") == 5);
     return 0;
 }
