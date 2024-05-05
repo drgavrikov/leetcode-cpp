@@ -1,18 +1,16 @@
 #include <string>
 #include <cassert>
 
-using namespace std;
-
 class Problem1702 {
 public:
-    string maximumBinaryString(string binary) {
+    std::string maximumBinaryString(std::string binary) {
         size_t firstZero = binary.find('0');
-        if (firstZero == string::npos) return binary;
+        if (firstZero == std::string::npos) return binary;
 
-        size_t countZeros = count(binary.begin() + firstZero, binary.end(), '0');
-        size_t countOnes = binary.length() - firstZero - countZeros;
+        auto countZeros = static_cast<size_t>(std::count(std::next(binary.begin(), (int) firstZero), binary.end(), '0'));
+        auto countOnes = static_cast<size_t>(binary.length() - firstZero - countZeros);
 
-        string result(firstZero, '1');
+        std::string result(firstZero, '1');
         result.append(countZeros - 1, '1');
         result.push_back('0');
         result.append(countOnes, '1');
