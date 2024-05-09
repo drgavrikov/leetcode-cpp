@@ -1,14 +1,5 @@
 /.idea/*
 /.idea/misc.xml
-/cmake-build-debug
-/Problem32
-/Problem129
-/Problem356
-/Problem1702
-/Problem1915
-/Problem159
-/Problem2997
-/Problem2370
-/Problem834
-/Problem2441
-/Problem165
+/.vscode/
+/cmake-build-debug/
+/build/

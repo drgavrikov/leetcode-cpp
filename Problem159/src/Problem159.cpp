@@ -12,8 +12,8 @@ public:
 
         int result = 0;
 
-        int left = 0;
-        int right = 0;
+        size_t left = 0;
+        size_t right = 0;
 
         while (right < s.length()) {
             chars[s[right]]++;
@@ -25,7 +25,7 @@ public:
                 }
                 left++;
             }
-            result = std::max(result, right - left + 1);
+            result = std::max(result, (int)(right - left + 1));
             right++;
         }
 

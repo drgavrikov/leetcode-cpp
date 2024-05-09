@@ -10,11 +10,11 @@ class Problem2997 {
 public:
     int minOperations(const std::vector<int> &nums, int k) {
         const int bitsInInt = sizeof(int) * 8;
-        std::bitset<bitsInInt> xorResult = k;
+        std::bitset<bitsInInt> xorResult = static_cast<size_t>(k);
         for (int num: nums) {
-            xorResult ^= num;
+            xorResult ^= static_cast<size_t>(num);
         }
-        return xorResult.count();
+        return static_cast<int>(xorResult.count());
     }
 };
 

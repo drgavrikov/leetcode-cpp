@@ -16,7 +16,7 @@ public:
         int closedCount = 0;
         int reversedOpenedCount = 0;
         int reversedClosedCount = 0;
-        for (int index = 0; index < s.length(); ++index) {
+        for (size_t index = 0; index < s.length(); ++index) {
             if (s[index] == '(') openedCount++;
             else closedCount++;
             if (openedCount == closedCount)

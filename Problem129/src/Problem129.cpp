@@ -1,4 +1,4 @@
-#include "TreeNode.cpp"
+#include "TreeNode.hpp"
 #include <cassert>
 
 class Problem129 {

@@ -18,7 +18,7 @@ public:
         long long result = 0;
 
         int mask = 0;
-        for (int i = 0; i < word.length(); ++i) {
+        for (size_t i = 0; i < word.length(); ++i) {
             int bit = word[i] - 'a';
             mask ^= (1 << bit);
 
