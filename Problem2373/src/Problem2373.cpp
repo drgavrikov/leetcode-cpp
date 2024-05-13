@@ -9,7 +9,7 @@ using std::iostream;
 
 /**
  * @author Aleksandr Gavrikov
- * @url
+ * @url https://leetcode.com/problems/largest-local-values-in-a-matrix/solutions/5149791/sliding-window-solution/
  */
 class Problem2373 {
 public:
