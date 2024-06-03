@@ -8,13 +8,13 @@
 class Problem2486 {
 public:
     int appendCharacters(std::string s, std::string t) {
-        size_t sIndex = 0;
-        size_t tIndex = 0;
-        while (sIndex < s.length() && tIndex < t.length()) {
-            if (s[sIndex] == t[tIndex]) ++tIndex;
-            ++sIndex;
+        auto sIter = s.begin();
+        auto tIter = t.begin();
+        while (sIter != s.end() && tIter < t.end()) {
+            if (*sIter == *tIter) ++tIter;
+            ++sIter;
         }
-        return static_cast<int>(t.length() - tIndex);
+        return static_cast<int>(t.end() - tIter);
     }
 };
 
