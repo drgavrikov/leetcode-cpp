@@ -10,7 +10,7 @@ public:
     int appendCharacters(std::string s, std::string t) {
         auto sIter = s.begin();
         auto tIter = t.begin();
-        while (sIter != s.end() && tIter < t.end()) {
+        while (sIter != s.end() && tIter != t.end()) {
             if (*sIter == *tIter) ++tIter;
             ++sIter;
         }
