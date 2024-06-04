@@ -10,21 +10,24 @@ using std::string;
  */
 class Problem2370 {
 public:
-    int longestIdealString(string s, int k) {
+    int longestIdealString(const string& s, int k) {
         std::array<int, 26> dp{};
         std::fill(std::begin(dp), std::end(dp), 0);
 
         for (char ch: s) {
             int maxLength = 0;
             for (int shift = 0; shift <= k; ++shift) {
-                if (ch - shift >= 'a' && ch - shift <= 'z' && maxLength < dp[ch - shift - 'a'] + 1) {
-                    maxLength = dp[ch - shift - 'a'] + 1;
+                auto shiftLeftIndex = size_t (ch - shift - 'a');
+                if (ch - shift >= 'a' && ch - shift <= 'z' && maxLength < dp[shiftLeftIndex] + 1) {
+                    maxLength = dp[shiftLeftIndex] + 1;
                 }
-                if (ch + shift >= 'a' && ch + shift <= 'z' && maxLength < dp[ch + shift - 'a'] + 1) {
-                    maxLength = dp[ch + shift - 'a'] + 1;
+
+                auto shiftRightIndex = size_t (ch + shift - 'a');
+                if (ch + shift >= 'a' && ch + shift <= 'z' && maxLength < dp[shiftRightIndex] + 1) {
+                    maxLength = dp[shiftRightIndex] + 1;
                 }
             }
-            dp[ch - 'a'] = maxLength;
+            dp[size_t (ch - 'a')] = maxLength;
         }
         return *std::max_element(std::begin(dp), std::end(dp));
     }
