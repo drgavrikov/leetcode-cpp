@@ -1,7 +1,6 @@
 #include <vector>
 #include <unordered_set>
 #include <cassert>
-#include <iostream>
 
 /**
  * @author Aleksandr Gavrikov
