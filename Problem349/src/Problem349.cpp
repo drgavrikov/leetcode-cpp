@@ -1,6 +1,7 @@
 #include <vector>
 #include <unordered_set>
 #include <cassert>
+#include <iostream>
 
 /**
  * @author Aleksandr Gavrikov
@@ -9,13 +10,13 @@
 class Problem349 {
 public:
     std::vector<int> intersection(std::vector<int> &nums1, std::vector<int> &nums2) {
-        std::unordered_set<int> unique1(nums1.begin(), nums1.end());
         std::unordered_set<int> unique2(nums2.begin(), nums2.end());
 
         std::vector<int> result;
-        for (auto num: unique1) {
-            if (unique2.find(num) != unique2.end()) {
+        for (auto num: nums1) {
+            if (unique2.count(num) > 0) {
                 result.push_back(num);
+                unique2.erase(num);
             }
         }
         return result;
