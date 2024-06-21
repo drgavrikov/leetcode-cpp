@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wconversion -Wpedantic")
 
 add_subdirectory(Problem32)
+add_subdirectory(Problem75)
 add_subdirectory(Problem129)
 add_subdirectory(Problem159)
 add_subdirectory(Problem165)
