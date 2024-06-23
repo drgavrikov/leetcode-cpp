@@ -1,6 +1,10 @@
 #include <string>
 #include <cassert>
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/maximum-binary-string-after-change/solutions/5003023/solution-in-linear-time/
+ */
 class Problem1702 {
 public:
     std::string maximumBinaryString(std::string binary) {
