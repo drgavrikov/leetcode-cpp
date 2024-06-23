@@ -6,7 +6,7 @@
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/solutions/5089876/linear-solution-with-bitset/
+ * @url https://leetcode.com/problems/score-of-a-string/solutions/5242625/one-line-solution/
  */
 class Problem3110 {
 public:
