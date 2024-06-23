@@ -14,10 +14,11 @@ public:
         size_t size = rooms.size();
         auto used = std::vector<bool>(size, false);
 
-        std::function<void(int)> dfs = [&](int vertex) {
+        std::function<void(size_t)> dfs = [&](size_t vertex) {
             used[vertex] = true;
             for (auto next: rooms[vertex]) {
-                if (!used[next]) dfs(next);
+                auto nextVertex = static_cast<size_t>(next);
+                if (!used[nextVertex]) dfs(nextVertex);
             }
         };
         dfs(0);
