@@ -2,6 +2,10 @@
 #include <vector>
 #include <algorithm>
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/sort-colors/solutions/5301365/the-dutch-national-flag-problem/
+ */
 class Problem75 {
 public:
     void sortColors(std::vector<int>& nums) {
