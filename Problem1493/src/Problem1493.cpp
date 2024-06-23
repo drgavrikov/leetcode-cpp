@@ -1,5 +1,6 @@
 #include <cassert>
 #include <vector>
+#include <iostream>
 
 /**
  * @author Aleksandr Gavrikov
@@ -33,6 +34,6 @@ public:
 int main() {
     Problem1493 problem;
     std::vector<int> nums = {1, 1, 1, 0, 1};
-    assert(problem.longestSubarray(nums) == 5);
+    assert(problem.longestSubarray(nums) == 4);
     return 0;
 }
