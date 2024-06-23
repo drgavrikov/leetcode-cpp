@@ -18,9 +18,6 @@ public:
             return x >= 0 && x < n && y >= 0 && y < m;
         };
 
-        std::vector<int> dx = {0, 0, 1, -1};
-        std::vector<int> dy = {1, -1, 0, 0};
-        
         int maxScore = 0;
 
         std::function<void(size_t, size_t, int)> dfs = [&](size_t x, size_t y, int score) {
