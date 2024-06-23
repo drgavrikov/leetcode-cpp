@@ -2,10 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <deque>
-#include <iostream>
-
-using std::vector;
-using std::iostream;
 
 /**
  * @author Aleksandr Gavrikov
@@ -13,9 +9,9 @@ using std::iostream;
  */
 class Problem2373 {
 public:
-    vector<vector<int>> largestLocal(vector<vector<int>> &grid) {
+    std::vector<std::vector<int>> largestLocal(std::vector<std::vector<int>> &grid) {
         auto size = grid.size();
-        auto result = vector(size - 2, vector<int>(size - 2));
+        auto result = std::vector(size - 2, std::vector<int>(size - 2));
         for (size_t row = 0; row < size - 2; ++row) {
             std::deque<int> deque;
             deque.push_back(std::max(grid[row][0], std::max(grid[row + 1][0], grid[row + 2][0])));
@@ -37,12 +33,12 @@ public:
 
 int main() {
     Problem2373 problem;
-    vector<vector<int>> grid =
+    std::vector<std::vector<int>> grid =
             {{9, 9, 8, 1},
              {5, 6, 2, 6},
              {8, 2, 6, 4},
              {6, 2, 2, 2}};
-    vector<vector<int>> result =
+    std::vector<std::vector<int>> result =
             {{9, 9},
              {8, 6}};
     assert(problem.largestLocal(grid) == result);
