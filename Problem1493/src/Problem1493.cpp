@@ -1,6 +1,5 @@
 #include <cassert>
 #include <vector>
-#include <iostream>
 
 /**
  * @author Aleksandr Gavrikov
