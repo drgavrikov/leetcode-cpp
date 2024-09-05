@@ -2,9 +2,14 @@
 #include <string>
 #include <vector>
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/word-break/solutions/5740594/dynamic-programming-solution/
+ */
+
 class Problem139 {
 public:
-    bool wordBreak(std::string s, const std::vector<std::string> &wordDict) {
+    static bool wordBreak(std::string s, const std::vector<std::string> &wordDict) {
         size_t length = s.length();
         std::vector<bool> dp(length + 1);
         dp[0] = true;
