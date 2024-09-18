@@ -10,7 +10,7 @@
 
 class Problem215 {
 public:
-    int findKthLargest(std::vector<int>& nums, int k) {
+    int findKthLargest(std::vector<int> &nums, int k) {
         std::priority_queue<int, std::vector<int>, std::greater<int>> queue;
         for (int num: nums) {
             queue.push(num);
@@ -25,7 +25,7 @@ public:
 int main() {
 
     Problem215 problem;
-    std::vector<int> nums = {3,2,1,5,6,4};
+    std::vector<int> nums = {3, 2, 1, 5, 6, 4};
     assert(problem.findKthLargest(nums, 2) == 5);
 
     return 0;
