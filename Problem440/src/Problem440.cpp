@@ -3,7 +3,7 @@
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/solutions/5821842/ounting-tree/
+ * @url https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/solutions/5821842/counting-tree/
  */
 class Problem440 {
 

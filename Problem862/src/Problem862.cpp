@@ -11,7 +11,7 @@ using std::deque;
  */
 class Problem862 {
 public:
-    int shortestSubarray(vector<int>& nums, int k) {
+    static int shortestSubarray(vector<int>& nums, int k) {
         size_t n = nums.size();
         std::vector<long> prefix_sums(n + 1, 0);
 
