@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.23.2)
 
 project(leetcode_cpp CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wconversion -Wpedantic")
 
 add_subdirectory(Problem32)
@@ -34,6 +34,7 @@ add_subdirectory(Problem1915)
 add_subdirectory(Problem2373)
 add_subdirectory(Problem2441)
 add_subdirectory(Problem2486)
+add_subdirectory(Problem2554)
 add_subdirectory(Problem2812)
 add_subdirectory(Problem2997)
 add_subdirectory(Problem3075)
